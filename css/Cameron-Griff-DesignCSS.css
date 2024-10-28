@@ -98,7 +98,9 @@ header-bar ul li a{
   letter-spacing: 2px;
   transition: 0.6s;
   min-height: 40px;
+  max-height: 40px;
   min-width: 40px;
+  max-width: 40px;
   
 }
 

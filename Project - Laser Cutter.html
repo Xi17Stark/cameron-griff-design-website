@@ -29,6 +29,9 @@
         
         
         <script src="./ProjectNameFade.js"></script>
+        <script src="./ScrollBar.js"></script>
+        
+        
         
         <script type="text/javascript">
             window.addEventListener("scroll", function(){
@@ -36,6 +39,18 @@
                 header.classList.toggle("sticky", window.scrollY > 0);
             })
         </script>
+        
+        
+        
+        <script src="js/jquery-3.5.1.min.dc5e7f18c8.js"></script>
+        <script>
+            $(function () {
+                $("#navbarContent").load("navbar.html");
+                $("#contactContent").load("ContactBottomLinks.html");
+            });
+        </script>
+        
+        
         
     </head>
     <body>
@@ -89,7 +104,7 @@
                     data-wf-ignore="true"
                     data-object-fit="cover"
                     class="BXETVVZL">
-                    <source src="media/laser-cutter-video.mp4" type="video/mp4" />
+                    <source src="media/laser-cutter-hero.mp4" type="video/mp4" />
                 </video>
                 
                 <div class="glassy-container">
@@ -100,6 +115,9 @@
                 
             </div>
         
+            
+            <div class="scroll-indicator"></div>
+            
         
             <div class="padding-global">
                 <div class="w-layout-blockcontainer container w-container">
@@ -1051,109 +1069,10 @@
         
         
          <section>
-            <div class="padding-global">
-                <div class="w-layout-blockcontainer container w-container">
-                    <div class="footer-component">
-                        <div data-w-id="93f4457d-ec22-3c66-b213-0b7ef6a67132" class="footer-heading">
-                            <img
-                                loading="lazy"
-                                src="images/DesignLogo.jpg"
-                                alt="Entropy Logo" 
-                                class="bottom-logo"
-                                 />
-                        </div>
-                        <div data-w-id="93f4457d-ec22-3c66-b213-0b7ef6a67134" class="w-layout-grid footer-grid">
-                            <div id="w-node-_93f4457d-ec22-3c66-b213-0b7ef6a67135-f6a6712e" class="footer-grid-wrap">
-                                <div class="text-size-large text-weight-medium">Explore</div>
-                                <div class="footer-links-wrapper">
-                                    <a href="/" aria-current="page" class="footer-link w--current">Home</a>
-                                </div>
-                                <a href="/about" class="footer-link">About</a
-                                ><a href="/features" class="footer-link">Features</a>
-                            </div>
-                            <div id="w-node-_93f4457d-ec22-3c66-b213-0b7ef6a67159-f6a6712e" class="footer-grid-wrap">
-                                <div class="text-size-large text-weight-medium">Support</div>
-                                <a href="/contact" class="footer-link">Contact</a
-                                ><a href="/pricing" class="footer-link">Pricing</a
-                                ><a href="/faq" class="footer-link">FAQ</a>
-                            </div>
-                            <div class="footer-grid-wrap">
-                                <div class="text-size-large text-weight-medium">Others</div>
-                                <div class="footer-links-wrapper">
-                                    <a href="/other/style-guide" class="footer-link">Style Guide</a
-                                    ><a href="/other/changelog" class="footer-link">Changelog</a
-                                    ><a href="/blog" class="footer-link">Blog</a>
-                                </div>
-                            </div>
-                            <div id="w-node-b91edead-1de6-1605-60a1-b4a85284b2d2-f6a6712e" class="footer-grid-wrap">
-                                <div class="text-size-large text-weight-medium">Utility</div>
-                                <a href="https://entropy-template.webflow.io/401" class="footer-link">Password</a
-                                ><a href="/other/instruction" class="footer-link">Instruction</a
-                                ><a href="/other/license" class="footer-link">License</a>
-                            </div>
-                        </div>
-                        <div data-w-id="93f4457d-ec22-3c66-b213-0b7ef6a6715f" class="footer-social-wrapper">
-                            <a
-                                href="https://webflow.com/templates/designers/lucas-gusso"
-                                class="footer-social w-inline-block"
-                                ><img
-                                    loading="lazy"
-                                    src="images/66f30c8d2ac082d2aee64c59_Social%20Icons%2004.svg"
-                                    alt="Twitter Icon"
-                                    class="icon-embed" /></a
-                            ><a href="https://www.instagram.com/lucas.webflow/" class="footer-social w-inline-block"
-                                ><img
-                                    loading="lazy"
-                                    src="images/66f30c8d2ac082d2aee64c5b_Social%20Icons%2003.svg"
-                                    alt="Facebook Icon"
-                                    class="icon-embed" /></a
-                            ><a
-                                href="https://webflow.com/templates/designers/lucas-gusso"
-                                class="footer-social w-inline-block"
-                                ><img
-                                    loading="lazy"
-                                    src="images/66f30c8d2ac082d2aee64c5a_Social%20Icons%2002.svg"
-                                    alt="Instagram Icon"
-                                    class="icon-embed" /></a
-                            ><a href="https://www.instagram.com/lucas.webflow/" class="footer-social w-inline-block"
-                                ><img
-                                    loading="lazy"
-                                    src="images/66f30c8d2ac082d2aee64c58_Social%20Icons%2001.svg"
-                                    alt="Github Icon"
-                                    class="icon-embed"
-                            /></a>
-                        </div>
-                        <div data-w-id="93f4457d-ec22-3c66-b213-0b7ef6a67168" class="footer-links-wrapper">
-                            
-                            <!--
-                            <div class="footer-links">
-                                <a href="#" class="footer-link">License</a>
-                                <div class="vertical-line"></div>
-                                <a href="#" class="footer-link">Style Guide</a>
-                                <div class="vertical-line"></div>
-                                <a href="https://templatestudio.webflow.io/" class="footer-link">Customize</a>
-                            </div>
-                            -->
-                            <div class="credits-wrapper">
-                                <p>Design Portfolio</p>
-                                <a
-                                    href="https://webflow.com/templates/designers/lucas-gusso"
-                                    target="_blank"
-                                    class="credits w-inline-block"
-                                    ><p class="paragraph">
-                                        Designed &amp; Developed by <span class="text-color-white">Cameron Griffin</span>
-                                    </p>
-                                </a
-                                >
-                              
-                                    
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="contactContent"></div>
         </section>
+        
+        
         <script src="js/jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript" crossorigin="anonymous"></script>
         <script src="js/webflow.e856b9eae.js" type="text/javascript"></script>
     </body>

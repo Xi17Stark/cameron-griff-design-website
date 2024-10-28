@@ -61,6 +61,9 @@ header-bar ul{
   transition: 0.6s;
 }
 
+.navbar-html-link{
+  position: sticky;
+} 
 
 header-bar ul li{
   
@@ -1519,9 +1522,12 @@ textarea.w-input, textarea.w-select {
 
 
 .w-project-card-video {
+  position: relative;
   color: #fff;
   height: 100%;
   align-content: center;
+  
+  z-index: 0;
   /*height: 500px;
   width: 900px;
   position: relative;
@@ -2948,7 +2954,8 @@ blockquote {
 
 .primary-button {
   color: var(--color--white);
-  background-color: #ed5145;
+  background-color: transparent; /* Default background */
+  border: 2px solid #ed5145; /* Red border */
   border-radius: 50rem;
   justify-content: center;
   align-items: center;
@@ -2957,7 +2964,17 @@ blockquote {
   display: flex;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
 }
+
+.primary-button:hover {
+  background-color: #ed5145; /* Red background on hover */
+  border-color: #ed5145; /* Match border color to background */
+}
+
+
+
+
 
 .trusted-by-hero-logos {
   grid-column-gap: 4rem;
@@ -3273,6 +3290,7 @@ blockquote {
   height: 50vh;
   display: grid;
   overflow: hidden;
+  max-width: 1500px;
 }
 
 .steps-content {
@@ -3293,7 +3311,25 @@ blockquote {
   width: 100%;
   padding: 6rem 5rem;
   display: flex;
+  
 }
+
+
+.left-full-content {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 6rem 5rem;
+  display: flex;
+  z-index: 10;
+  /*background: linear-gradient(to right, rgba(44, 44, 44, 0.81), rgba(44, 44, 44, 0));*/
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.71), rgba(44, 44, 44, 0));
+  
+}
+
 
 .steps-stack-component {
   grid-column-gap: 1.125rem;
@@ -3304,9 +3340,10 @@ blockquote {
 }
 
 .steps-image {
-  z-index: 1;
+  z-index: 0;
   position: absolute;
   inset: 0%;
+  width: 100%;
 }
 
 .right-content {
@@ -3316,6 +3353,39 @@ blockquote {
   display: flex;
   position: relative;
 }
+
+
+.center-full-content {
+  align-content: center;
+  align-items: center;
+  width: min-content;
+  
+  display: flex;
+  position: relative;
+  z-index: 0;
+}
+
+.w-project-card-full-video {
+  position: relative;
+  color: #fff;
+  max-width: 1500px;
+  align-content: center;
+  transform: translateX(-750px);
+  z-index: 0;
+  /*height: 500px;
+  width: 900px;
+  position: relative;
+  overflow: hidden;
+  */
+}
+
+
+
+
+
+
+
+
 
 .steps-tag {
   grid-column-gap: .5rem;
@@ -3505,6 +3575,12 @@ blockquote {
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease-in-out;
+}
+
+.topic:hover {
+    /*color: rgb(249, 28, 86); /* Light blue color on hover */
+    color: rgb(185, 185, 185);
+    /*color: rgb(255, 78, 78);*/
 }
 
 .subtopics-container {
@@ -4617,6 +4693,27 @@ blockquote {
 
 
 
+
+
+
+
+.scroll-indicator {
+    position: fixed; /* Stays at the bottom of the screen */
+    bottom: 20px; /* Distance from the bottom edge */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center it */
+    width: 15vw; /* Fixed width of the scroll indicator */
+    height: 5px; /* Thickness of the scroll bar */
+    background-color: rgba(255, 255, 255, 0.5); /* White color with low opacity */
+    border-radius: 10px; /* Rounded corners */
+    opacity: 0.6; /* Initial opacity */
+    transition: opacity 0.3s ease; /* Smooth fade-out effect */
+    z-index: 1000; /* Keep it above other content */
+}
+
+
+
+
 .full-frame-video {
     position: relative; /* Allow it to scroll */
     top: -50px;
@@ -5441,6 +5538,39 @@ blockquote {
     width: 100%;
   }
 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   .left-content {
     justify-content: space-between;
     width: 100%;

@@ -97,6 +97,9 @@ header-bar ul li a{
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.6s;
+  min-height: 40px;
+  min-width: 40px;
+  
 }
 
 
@@ -3302,8 +3305,6 @@ blockquote {
 }
 
 .steps-card {
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
   background-color: #141313;
   border: 1px solid #393939;
   border-radius: 1rem;
@@ -3312,6 +3313,8 @@ blockquote {
   grid-auto-columns: 1fr;
   width: 100%;
   height: 50vh;
+  min-height: 650px;
+  
   display: grid;
   overflow: hidden;
   max-width: 1500px;
@@ -3438,6 +3441,7 @@ blockquote {
 .steps-item {
   position: sticky;
   top: 8vh;
+  
 }
 
 .steps-wrapper {

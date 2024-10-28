@@ -47,6 +47,7 @@
         <script src="./TextFadeChange.js"></script>
         <script src="./TextScramble.js"></script>
         <script src="./ExperienceHover.js"></script>
+        <script src="./CoverImageFade.js"></script>
 
         <script type="text/javascript">
             window.addEventListener("scroll", function () {
@@ -279,24 +280,21 @@
         </section>
         <div class="overflow-hidden">
             <section>
+                
+                
                 <div data-w-id="16b69460-66f0-c83d-2c5f-5e56a35c1391" style="opacity: 0" class="about-hero-interaction">
                     <div class="hero-sticky-component">
                         <div data-w-id="16b69460-66f0-c83d-2c5f-5e56a35c1393" class="sticky-images left">
                             <img
+                                id="left-image"
                                 sizes="(max-width: 479px) 100vw, 30vw"
-                                srcset="images/TVCabinate/CabinateRender2_Close_min.jpg 848w"
-                                alt="Slider Image"
+                                
+                                alt="Left Slider Image"
                                 src="images/TVCabinate/CabinateRender2_Close_min.jpg"
                                 class="image" />
                         </div>
 
                         <div data-w-id="16b69460-66f0-c83d-2c5f-5e56a35c1395" class="sticky-images middle">
-                            <!--
-                            <iframe width="1400" height="800" title="CoverVideo" 
-                                src="https://www.youtube.com/embed/us-pqguSXXg?autoplay=1&mute=1&loop=1">
-                            </iframe> 
-                            -->
-
                             <div
                                 data-poster-url="images/BlackScreen.jpg"
                                 data-video-urls="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c75_About%20Hero%20Video-transcode.mp4,https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c75_About%20Hero%20Video-transcode.webm"
@@ -321,16 +319,20 @@
                                 </video>
                             </div>
                         </div>
+
                         <div data-w-id="16b69460-66f0-c83d-2c5f-5e56a35c1397" class="sticky-images right">
-                            <img
-                                sizes="(max-width: 479px) 100vw, 30vw"
-                                srcset="images/TVCabinate/Scene8_min.jpg 848w"
-                                alt="Hero Image"
-                                src="images/TVCabinate/Scene8_min.jpg"
-                                class="image" />
-                        </div>
+    <img
+        id="right-image"
+        sizes="(max-width: 479px) 100vw, 30vw"
+        
+        alt="Right Hero Image"
+        src="images/TVCabinate/Scene8_min.jpg"
+        class="image" />
+</div>
                     </div>
                 </div>
+                
+                
             </section>
         </div>
 

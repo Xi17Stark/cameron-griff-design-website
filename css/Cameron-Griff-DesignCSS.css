@@ -367,6 +367,30 @@ span{
 
 
 
+
+
+
+
+
+
+.fade-image {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out; /* Ensure this matches your JS timing */
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1.5s ease; /* Adjust the timing to match JavaScript */
+}
+
+img {
+    transition: opacity 1.5s ease; /* Ensure the image itself has a transition */
+}
+
+
+
+
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }

@@ -3320,6 +3320,7 @@ blockquote {
   display: grid;
   overflow: hidden;
   max-width: 1500px;
+  clip-path: inset(0 round 1rem); /* Match your card’s border-radius */
 }
 
 .steps-content {
@@ -3373,7 +3374,10 @@ blockquote {
   position: absolute;
   inset: 0%;
   width: 100%;
+  
 }
+
+
 
 .right-content {
   justify-content: space-between;

@@ -3,12 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const leftImages = [
         "images/LaserCutter/OpenLid.png",
         "images/LaserCutter/SidePanel2.png",
+        "images/Longboard/Scene-37004008.png",
         "images/TVCabinate/CabinateRender2_Close_min.jpg"
     ];
 
     const rightImages = [
-        "images/TVCabinate/CabinateRender2_Close_min.jpg",
         "images/LaserCutter/Scene-12.png",
+        "images/Longboard/Scene-37004010_1.png",
         "images/TVCabinate/Scene8_min.jpg"
     ];
 

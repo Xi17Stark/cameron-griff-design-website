@@ -1,0 +1,132 @@
+.carousel {
+    position: relative;
+    max-width: 100%;
+    min-width: 1463px; /* Set minimum width for the carousel */
+    overflow: hidden; /* Ensures slides are contained */
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 2rem;
+    position: relative; /* For positioning gradient effects */
+}
+
+/* Added gradient overlay */
+.carousel-track-container::before,
+.carousel-track-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 30%; /* Adjust for the width of the gradient */
+    z-index: 1; /* Place above the images but below the toggle button */
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+.carousel-track-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent); /* Adjust colors and opacity as needed */
+}
+
+.carousel-track-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.25), transparent); /* Adjust colors and opacity as needed */
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Adjust duration for scrolling */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-slide {
+    position: relative;
+    flex: 0 0 100%; /* Each slide takes full width of container */
+    height: 56.25vw; /* 16:9 aspect ratio based on width */
+    max-height: 900px; /* Max height in pixels if you want a limit */
+    overflow: hidden;
+}
+
+.main-image,
+.toggle-image {
+    width: 100%;
+    height: 100%; /* Ensure images take full height of their container */
+    object-fit: cover; /* Maintain aspect ratio, center cropped */
+    display: block; /* Ensures no gaps around images */
+    position: absolute; /* Position images on top of each other */
+    top: 0; /* Align both images to the top of the container */
+    left: 0; /* Align both images to the left of the container */
+    transition: opacity 0.5s ease-in-out; /* Fade transition */
+}
+
+/* Ensure toggle image is hidden initially */
+.toggle-image {
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Hidden by default */
+    z-index: 2; /* Place above the main image when active */
+}
+
+/* Add this class to make toggle image visible */
+.toggle-image.active {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Ensure it's visible */
+}
+
+.carousel-nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb; /* Default dot color */
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for color and size */
+}
+
+.carousel-dot.active {
+    background-color: red; /* Active dot color */
+    transform: scale(1.2); /* Slightly increase size */
+}
+
+/* Toggle Button Styles */
+.toggle-button {
+    position: absolute; /* Position it absolutely within the carousel-slide */
+    top: 15px; /* Move it to the top */
+    right: 15px; /* Move it to the right */
+    background-color: transparent; /* Make background transparent */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    cursor: pointer; /* Change cursor to pointer */
+    z-index: 10; /* Ensure button is above images */
+    transition: border-color 0.3s; /* Transition for border color */
+    animation: flash 1.5s infinite; /* Add animation */
+}
+
+.toggle-button img {
+    width: 30px; /* Set a width for the icon */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@keyframes flash {
+    0%, 100% {
+        filter: brightness(0) invert(1); /* White */
+        opacity: 0.3; /* Starting opacity */
+    }
+    50% {
+        filter: brightness(1) invert(0); /* Black */
+        opacity: 0.7; /* Maximum opacity at midpoint */
+    }
+}
+
+.toggle-button.active {
+    border-color: red; /* Add border color for active state if needed */
+    animation: none; /* Stop flashing when active */
+}

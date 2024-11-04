@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.steps-carousel-item');
 
     const scrollSpeed = 550;
-    const getOffsetAdjustment = () => window.innerWidth * 0.23;
+    const getOffsetAdjustment = () => window.innerWidth * 0.21;
 
     const centerRadius = 10;
 

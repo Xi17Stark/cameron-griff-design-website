@@ -5,10 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollSpeed = 550;
     const getOffsetAdjustment = () => window.innerWidth * 0.23;
 
-    // Center radius for scroll detection (used only for scrolling effect)
     const centerRadius = 10;
 
-    // Enable scrolling with mouse wheel
     wrapper.addEventListener('wheel', (e) => {
         e.preventDefault();
         wrapper.scrollBy({
@@ -64,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const cardCenter = cardRect.left + cardRect.width / 2;
             const distance = Math.abs(cardCenter - center);
 
-            // Center detection for scroll, with an expanded radius
             const maxDistance = (carouselRect.width / 2) + centerRadius;
             const opacity = Math.max(0.2, 1 - distance / maxDistance);
             const scale = Math.max(0.8, 1 - distance / maxDistance * 0.2);
@@ -74,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Scroll to the second card on load
     if (items.length > 1) {
         const secondCardPosition = items[1].offsetLeft - (wrapper.offsetWidth / 2) + (items[1].offsetWidth / 2);
         wrapper.scrollTo({
@@ -83,20 +79,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Hover image swap delay functionality
-    const hoverDelay = 1000; // Delay time in milliseconds
+    const hoverDelay = 1000;
     let hoverTimeout;
 
     items.forEach(item => {
+        const video = item.querySelector('.video-hover');
+
         item.addEventListener('mouseenter', () => {
             hoverTimeout = setTimeout(() => {
-                item.classList.add('hover-active'); // Add class after delay
+                item.classList.add('hover-active');
+
+                if (video) {
+                    video.currentTime = 0;
+                    video.play();
+                }
             }, hoverDelay);
         });
 
         item.addEventListener('mouseleave', () => {
-            clearTimeout(hoverTimeout); // Clear the timeout if hover ends early
-            item.classList.remove('hover-active'); // Remove class immediately
+            clearTimeout(hoverTimeout);
+            item.classList.remove('hover-active');
+
+            if (video) {
+                video.pause();
+            }
         });
     });
 });

@@ -226,6 +226,19 @@
   transition: opacity .7s ease;
 }
 
+
+.video-hover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Adjust duration as needed */
+}
+
 /* Show hover image when 'hover-active' class is applied */
 .hover-active .image-default {
   opacity: 0; /* Hide the default image */
@@ -235,7 +248,10 @@
   opacity: 1; /* Show the hover image */
 }
 
-
+.steps-carousel-item.hover-active .video-hover {
+    display: block;
+    opacity: 1;
+}
 
 
 

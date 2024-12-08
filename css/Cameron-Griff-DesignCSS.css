@@ -71,6 +71,25 @@ body {
 
 
 
+.development-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 40px; /* Adjust height as needed */
+    /*background: #ed51458c;*/
+    background: linear-gradient(to bottom, rgba(50, 50, 50, 1), rgba(50, 50, 50, 0.7));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Ensure it's above the rest of the content */
+    color: white;
+    font-size: 14px; /* Adjust font size as needed */
+    font-weight: bold;
+    text-transform: uppercase; /* Optional: style text */
+    padding: 0 10px;
+    box-shadow: 0 0 15px 5px rgba(50, 50, 50, 0); /* Optional: adds a subtle shadow */
+}
 
 .w-layout-blockcontainer-wide {
   max-width: 3000px;

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+body {
+    
+    place-content: center;
+    
+	
+}
+
+.flipbook {
+    /* Fill available width but don’t exceed a comfortable max */
+    width: 90vw;
+    /* Let height be determined by content */
+    height: auto;
+    
+    /* If you need it centered on wide screens */
+    margin: 0 auto;
+}
+
+
+.flipbook .page {
+    background: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    
+    
+}
+
+.page img {
+  display: block;
+  width: 100%;
+  height: auto;        /* critical: lets height follow the image aspect */
+  object-fit: contain; /* safe even if height is auto */
+}
+

@@ -1,0 +1,24 @@
+.custom-cursor{
+  /* tip offset (tweak to taste) */
+  --cursor-offset-x: 6px;
+  --cursor-offset-y: 6px;
+
+  position:fixed; left:0; top:0;
+  width:14px; height:14px; border-radius:50%;
+  background:rgba(255,255,255,.35);
+  pointer-events:none; z-index:9999;
+
+  translate:-50% -50%;
+  transition: opacity 100ms ease, scale 100ms ease;
+  will-change: translate, scale, opacity;
+
+  /* almost invisible when just “visible” */
+  opacity:0;
+}
+.custom-cursor--visible{ opacity:0.15; }   /* ~6% idle */
+.custom-cursor--active{ scale:1.6; opacity:0.60; } /* 20% on hover */
+.custom-cursor--down{ scale:.92; opacity:.45; }
+
+@supports not (translate: 0) {
+  .custom-cursor{ transform: translate(-50%,-50%); }
+}

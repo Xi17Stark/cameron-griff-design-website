@@ -1,0 +1,425 @@
+.feature-box {
+  position: relative;
+  background: #2B2B2B;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 2000px;
+  height: 700px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  overflow: hidden; /* ensures the Lottie stays inside rounded corners */
+}
+
+/* keep both columns on one row */
+.feature-layout {
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+  align-items: stretch;   /* instead of center: make columns fill panel height */
+}
+
+.feature-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  justify-content: center;  /* center *buttons* inside their column */
+  flex: 0 0 30%;
+  height: 100%;
+}
+
+.feature-content {
+  flex: 1 1 0;
+  min-width: 0;            /* prevents wrapping outside */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center its own text */
+  overflow: hidden;        /* keep text clipped if too long */
+}
+
+.feature-video,
+.feature-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  z-index: 0;
+  transition: opacity 0.6s ease;
+}
+
+.feature-layout {
+  position: relative;
+  z-index: 1; /* keeps content above video/image */
+}
+
+
+/* tidy default margins so they don't push things around */
+.feature-content h2{ margin: 0 0 .5rem; }
+.feature-content p { margin: 0; }
+
+@media (max-width: 900px){
+  .feature-layout{ flex-direction: column; align-items: stretch; }
+  .feature-buttons{ flex: none; width:100%; height:auto; }
+  .feature-content{ flex: none; min-width:auto; }
+}
+
+
+.feature-buttons .feature-btn{
+  display:inline-block; white-space:nowrap; width:auto; max-width:100%; box-sizing:border-box;
+}
+.feature-buttons .feature-btn.wrap-lines{ white-space:normal; }
+
+
+.feature-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 30%;
+  align-items: stretch;          /* full-width pills */
+}
+
+/* Base button styling stays as you have it */
+.feature-btn {
+  font-weight: 600;   /* title is bold by default */
+  padding-left: 3.2rem !important;  /* previously 2.6rem */
+}
+
+.feature-btn::before {
+  left: 1.0rem !important;  /* was 0.8rem */
+}
+
+/* Title part stays bold */
+.feature-btn .btn-title {
+  font-weight: 600;
+}
+
+/* Extra part is thinner and hidden until active */
+.feature-btn .btn-extra {
+  font-weight: 300;   /* thinner */
+  display: none;
+}
+
+/* When button is active, show the extra text */
+.feature-btn.is-active .btn-extra {
+  display: inline;
+}
+
+
+
+/* background image fills the panel behind the pills */
+.feature-box { position: relative; overflow: hidden; }
+
+.feature-bg {
+  position: absolute;
+  inset: 0;                 /* top/right/bottom/left: 0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* fill without distortion */
+  z-index: 0;
+  opacity: 1;
+  transition: opacity 300ms ease;
+  pointer-events: none;     /* clicks still hit buttons */
+  /* optional: slight dim so text is readable */
+  filter: brightness(0.85);
+}
+
+/* subtle left fade so the pills sit on a calmer area */
+.feature-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 45%);
+  z-index: 0;               /* same layer as image */
+  pointer-events: none;
+}
+
+/* make the foreground (buttons + right text) sit above */
+.feature-layout { position: relative; z-index: 1; }
+
+/* helper for crossfade */
+.feature-bg.is-fading { opacity: 0; }
+
+
+
+
+
+/* ✅ Auto-expanding, multi-line pill */
+.feature-btn {
+  position: relative;
+  display: flex !important;      /* ensure flex takes priority */
+  align-items: center;
+  gap: .75rem;
+
+  background: #3B3B3B;
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1.2rem 0.6rem 4.8rem; /* extra left for icon chip */
+  
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform .2s ease;
+
+  text-align: left;
+  width: 100% !important;        /* full width in column */
+  min-width: 0 !important;       /* allow shrinking */
+  max-width: 100%;
+
+  height: auto;                  /* grow with wrapped lines */
+  min-height: 44px;              /* accessible touch target */
+  line-height: 1.25;
+
+  white-space: normal !important; /* wrap text */
+  word-break: break-word;         /* avoid overflow */
+}
+
+/* + icon chip */
+.feature-btn::before {
+  content: "+";
+  position: absolute;
+  left: 2.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: transparent;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  transition: transform 0.22s ease;
+}
+
+.feature-btn.is-active {
+  background: #4A4A4A;          /* subtle highlight */
+}
+
+/* rotate + into × */
+.feature-btn.is-active::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.feature-btn:hover {
+  background: #616161;
+}
+
+/* legacy, but keep */
+.feature-btn.active {
+  background: #000;
+  color: #fff;
+}
+
+/* keyboard focus */
+.feature-btn:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.45);
+  outline-offset: 2px;
+}
+
+
+
+/* Column should let children stretch */
+.feature-buttons { align-items: flex-start; }
+.feature-buttons .feature-btn{ display:inline-block; white-space:nowrap; width:auto; max-width:100%; box-sizing:border-box; }
+.feature-buttons .feature-btn.wrap-lines{ white-space:normal; }
+
+
+/* Ensure any inner spans also wrap (in case of Webflow markup) */
+.feature-buttons .feature-btn *,
+.feature-buttons .w-button.feature-btn * {
+  white-space: normal !important;
+}
+
+/* Make the button a normal block so inner spans wrap as one sentence */
+.feature-buttons .feature-btn{
+  display: block !important;          /* was flex */
+  text-align: left;
+  padding-left: 2.6rem;               /* keep space for + chip */
+  line-height: 1.25;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+/* Title + extra should flow inline on the same line */
+.feature-btn .btn-title,
+.feature-btn .btn-extra{
+  display: inline;                    /* not flex items */
+  white-space: inherit;
+  line-height: inherit;
+}
+
+.feature-content {
+  flex: 1 1 auto;
+  min-width: 0;               /* prevents overflow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* vertical center */
+  align-items: flex-start;    /* keep text left-aligned */
+  padding-right: 2rem;        /* keep spacing from right edge */
+  max-width: 100%;            /* ensures text doesn’t spill */
+  box-sizing: border-box;
+}
+
+.feature-content h2 { margin: 0 0 .5rem; }
+.feature-content p  { margin: 0; }
+
+
+.feature-content.is-fading { opacity: 0; }
+
+
+/* Bold title; thin extra (hidden until active) */
+.feature-btn .btn-title{ font-weight: 600; }
+.feature-btn .btn-extra{ font-weight: 300; display: none; }
+
+/* Show the extra only when active */
+.feature-btn.is-active .btn-extra{ display: inline; }
+
+.feature-btn .btn-title{ margin-right: .25ch; }
+
+/* Keep your existing colors + icon behavior */
+.feature-btn::before{
+  content: "+";
+  position: absolute;
+  left: .8rem; top: 50%;
+  transform: translateY(-50%);
+  width: 22px; height: 22px;
+  display: grid; place-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: transparent;
+  font-weight: 700; font-size: 1rem; color: #fff;
+  transition: transform .22s ease;
+}
+.feature-btn.is-active::before{ transform: translateY(-50%) rotate(45deg); }
+
+/* Extra text is thin and initially hidden (but measurable) */
+.feature-btn .btn-title{ font-weight:600; }
+.feature-btn .btn-extra {
+  font-weight: 300;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+.feature-btn.is-active .btn-extra {
+  visibility: visible;
+}
+
+/* Keep your + chip */
+.feature-btn::before{
+  content:"+";
+  position:absolute; left:.8rem; top:50%;
+  transform:translateY(-50%);
+  width:22px; height:22px; display:grid; place-items:center;
+  border-radius:9999px; border:1px solid rgba(255,255,255,.25);
+  background:transparent; font-weight:700; font-size:1rem; color:#fff;
+  transition: transform .22s ease;
+}
+.feature-btn.is-active::before{ transform:translateY(-50%) rotate(45deg); }
+
+/* Animate the button scaling */
+.feature-btn.animating {
+  transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1); /* smooth overshoot feel */
+}
+
+.feature-content { transition: opacity 220ms ease; opacity: 1; }
+.feature-content.is-fading { opacity: 0; }
+.feature-btn .btn-extra { opacity: 0; visibility: hidden; transition: opacity .4s ease; }
+.feature-btn.is-active .btn-extra { visibility: visible; } /* opacity is set via JS */
+
+/* Left column keeps pills left-aligned, not stretched */
+.feature-buttons { align-items: flex-start; }
+.feature-buttons .feature-btn{
+  display: inline-block !important; /* content-width chip */
+  white-space: nowrap;              /* one line initially */
+  width: auto !important;
+  max-width: 100%;
+  box-sizing: border-box;           /* critical for px width animation */
+}
+.feature-buttons .feature-btn.wrap-lines{ white-space: normal; }
+
+
+/* --- FIX: keep content inside the panel --- */
+.feature-layout{
+  flex-wrap: nowrap !important;      /* never wrap to a 2nd row */
+  align-items: stretch !important;   /* both columns fill panel height */
+}
+
+/* both columns must be allowed to shrink */
+.feature-layout > *{
+  min-width: 0 !important;           /* critical to prevent overflow pushing wrap */
+}
+
+/* left column stays 30% */
+.feature-buttons{
+  flex: 0 0 30% !important;
+}
+
+/* right column fills the rest and can shrink */
+.feature-content{
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;           /* vertical center inside panel */
+  align-items: flex-start;
+  overflow: hidden;                   /* keep long text clipped within panel */
+}
+
+/* guard against global heading margins pushing it down */
+.feature-content h2{ margin: 0 0 .5rem !important; }
+.feature-content p { margin: 0 !important; }
+
+
+/* Full-cover Lottie inside the panel */
+/* Force Lottie SVG or canvas to fill the entire feature panel */
+/* Full-width Lottie inside the panel (keep buttons untouched) */
+.feature-lottie {
+  position: absolute;
+  inset: 0;                 /* sit under the foreground layout */
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+
+  /* center the animation vertically while it spans the full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Make the injected SVG/canvas span the panel WIDTH and keep aspect ratio */
+.feature-lottie > svg,
+.feature-lottie > canvas {
+  position: static;         /* let flexbox size/center it */
+  width: 100% !important;   /* fill panel width */
+  height: auto !important;  /* keep aspect ratio */
+          /* never exceed panel height */
+  /* no object-fit for SVG/canvas; flex centering handles layout */
+}
+
+/* Optional: readability gradient over the Lottie */
+.feature-lottie::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 45%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+#featureContent {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+
+
+

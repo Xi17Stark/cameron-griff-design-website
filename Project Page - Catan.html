@@ -1,0 +1,1092 @@
+<!doctype html>
+<html
+    data-wf-domain="entropy-ai.webflow.io"
+    data-wf-page="66f30c8d2ac082d2aee64c2d"
+    data-wf-site="66f30c8d2ac082d2aee64be2"
+    lang="en"
+    class="w-mod-js">
+    <head>
+        <meta charset="utf-8" />
+        <title>Laser Cutter Project</title>
+
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+        <link href="css/entropy-ai.webflow.ffecc0f6a.css" rel="stylesheet" type="text/css" />
+        <link href="css/Cameron-Griff-DesignCSS.css" rel="stylesheet" type="text/css" />
+        <link href="css/Carousel.css" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="js/jquery-3.5.1.min.dc5e7f18c8.js"></script>
+        <script src="./Loader.js"></script>
+        
+        <script src="./ProjectNameFade.js"></script>
+        <script src="./ScrollBar.js"></script>
+        <script src="./js/Carousel-cards.js"></script>
+        
+        
+        <!-- Smooth Scroll Script -->
+        <script type="module" src="/js/lenis-init.mjs"></script>
+        <link rel="stylesheet" href="css/cursor.css">
+        <script src="js/cursor.js" defer></script>
+        <!-------------------------->
+        
+        
+
+        <script type="text/javascript">
+            !(function (o, c) {
+                var n = c.documentElement,
+                    t = " w-mod-";
+                (n.className += t + "js"),
+                    ("ontouchstart" in o || (o.DocumentTouch && c instanceof DocumentTouch)) &&
+                        (n.className += t + "touch");
+            })(window, document);
+        </script>
+        <link href="images/DesignLogo.jpg" rel="shortcut icon" type="image/x-icon" />
+        <link href="images/DesignLogo.jpg" rel="apple-touch-icon" />
+
+        <script type="text/javascript">
+            window.addEventListener("scroll", function () {
+                var header = document.querySelector("header-bar");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            });
+        </script>
+        
+        
+        
+        
+        
+        <script>
+            $(function () {
+                $("#navbarContent").load("navbar.html");
+                $("#contactContent").load("ContactBottomLinks.html");
+            });
+        </script>
+        
+        
+        
+        
+    </head>
+    <body>
+        
+        <div id="preloader">
+            <img id="loader-frame" src="/media/Loading-Logo-Looped.gif" alt="Loading...">
+        </div>
+        
+        
+        
+        <!-- Header Bar -->
+        <div id="header-placeholder"></div>
+        <script>
+          fetch("/headerbar.html")
+            .then(response => response.text())
+            .then(data => {
+              const temp = document.createElement('div');
+              temp.innerHTML = data.trim();
+              document.getElementById("header-placeholder").replaceWith(temp.firstChild);
+            });
+        </script>
+
+        
+        
+        <div
+            data-animation="default"
+            data-collapse="medium"
+            data-duration="400"
+            data-easing="ease"
+            data-easing2="ease"
+            role="banner"
+            class="navbar w-nav"></div>
+        <section>
+            <div
+                data-poster-url="images/BlackScreen.jpg"
+                data-video-urls="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c75_About%20Hero%20Video-transcode.mp4,https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c75_About%20Hero%20Video-transcode.webm"
+                data-autoplay="true"
+                data-loop="true"
+                data-wf-ignore="true"
+                class="full-frame-video w-background-video w-background-video-atom">
+                <video
+                    id="LaserCutterHeroVideo"
+                    autoplay=""
+                    loop=""
+                    style="
+                        background-image: images/BlackScreen.jpg;
+                        box-shadow: transparent 0px 0px 0px 2560px;
+                    "
+                    muted=""
+                    playsinline=""
+                    data-wf-ignore="true"
+                    data-object-fit="cover"
+                    class="BXETVVZL">
+                    <source src="media/laser-cutter-video.mp4" type="video/mp4" />
+                </video>
+                
+                <div class="glassy-container">
+                    <h2 class="project-name-font project-name-fade">Industrial Power</h2>
+                    <h2 class="project-name-font project-name-fade">From a Minimal Form</h2>
+                    <p class="project-desc-font project-name-fade">50W CO2 Laser Cutter Design</p>
+                </div>
+                
+            </div>
+
+            
+            
+            <div class="scroll-indicator"></div>
+            
+           
+       
+            <div class="padding-global">
+                <div class="w-layout-blockcontainer container w-container">
+                    <div class="about-features-wrapper">
+                        <div class="about-features-header">
+                            
+
+                            <div class="header">
+                                <div class="heading-4 text-weight-medium">
+                                    A Desktop Sized Package with Industry Sized Capabilitys
+                                </div>
+                                <div class="opacity-60">
+                                    <div class="max-width-40ch">
+                                        <div>Designing a industry level product in a desktop form factor</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-layout-grid about-features-grid">
+                            <div id="w-node-_3603c32b-4f06-3646-d3b1-2c1ed6960dd0-aee64c2d" class="about-features-card">
+                                <div class="about-features-image">
+                                    <img
+                                        sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 28vw"
+                                        
+                                        alt="Card Image"
+                                        src="images/Catan/Catan_1.png"
+                                        loading="lazy"
+                                        class="image" />
+                                    <div class="mask-frame"></div>
+                                </div>
+                                <div class="about-features-content">
+                                    <div class="text-size-large text-weight-medium">Compact and Lightweight Parts</div>
+                                    <div class="opacity-80">
+                                        <div class="max-width-33ch">
+                                            <div>
+                                                Lightweight yet stong parts are achieved using carbon fiber reinforced
+                                                ASA, carbon rod linear rails, all through a ground-up design approach.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="w-node-_3603c32b-4f06-3646-d3b1-2c1ed6960dda-aee64c2d" class="about-features-card">
+                                <div class="about-features-image">
+                                    <img
+                                        sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 28vw"
+                                        
+                                        alt="Card Image"
+                                        src="images/Catan/Catan_2.png"
+                                        loading="lazy"
+                                        class="image" />
+                                    <div class="mask-frame"></div>
+                                </div>
+                                <div class="about-features-content">
+                                    <div class="text-size-large text-weight-medium">Modular Design</div>
+                                    <div class="opacity-80">
+                                        <div class="max-width-33ch">
+                                            <div>
+                                                Modular design that allows for easy iterative development, minimal
+                                                waste, and effortless part replacement when needed.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="w-node-_3603c32b-4f06-3646-d3b1-2c1ed6960de4-aee64c2d" class="about-features-card">
+                                <div class="about-features-image">
+                                    <img
+                                        sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 28vw"
+                                        
+                                        alt="Card Image"
+                                        src="images/Catan/Catan_3.png"
+                                        loading="lazy"
+                                        class="image" />
+                                    <div class="mask-frame"></div>
+                                </div>
+                                <div class="about-features-content">
+                                    <div class="text-size-large text-weight-medium">Premium Finish</div>
+                                    <div class="opacity-80">
+                                        <div class="max-width-33ch">
+                                            <div>
+                                                Experience the premium finish achieved with a sleek satin aluminum
+                                                frame, combining durability with elegant aesthetics.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--
+                        
+                        <div
+                            data-w-id="a4a9a67c-c774-e652-722a-738ad99a6e0a"
+                            style="opacity: 0"
+                            class="double-button-component margin-top-button-features">
+                            <a href="/contact" class="primary-button w-inline-block"
+                                ><div class="relative">
+                                    <div class="text-size-small text-weight-bold">Get Started</div>
+                                </div>
+                                <div class="button-elipse"></div></a
+                            ><a href="/features" class="secondary-button w-inline-block"
+                                ><div class="button-wrapper">
+                                    <div class="secondary-button-text">
+                                        <div class="text-weight-bold text-size-small">Learn More</div>
+                                    </div>
+                                    <div class="button-icon">
+                                        <div class="icon-wrapper">
+                                            <img
+                                                loading="lazy"
+                                                src="images/66f30c8d2ac082d2aee64ccb_Arrow.svg"
+                                                alt="Arrow"
+                                                class="icon" /><img
+                                                loading="lazy"
+                                                src="images/66f30c8d2ac082d2aee64ccb_Arrow.svg"
+                                                alt="Arrow"
+                                                class="icon" />
+                                        </div>
+                                    </div>
+                                    <div class="button-icon absolute"></div></div
+                            ></a>
+                        </div>
+                        
+                        -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="padding-global">
+                <div class="w-layout-blockcontainer container w-container">
+                    <div class="phase-cards-wrapper">
+                        <div class="specs-cards-header">
+                            <div class="header">
+                                <div class="heading-4 text-weight-medium">Specs</div>
+                                <div class="opacity-60"></div>
+                            </div>
+                        </div>
+                        <div class="phase-cards-grid">
+                            <div
+                                id="w-node-_0a0b49af-23b0-5822-d319-3cf64f7103f3-aee64c2ddd"
+                                data-w-id="0a0b49af-23b0-5822-d319-3cf64f7103f3"
+                                style="opacity: 0"
+                                class="specs-card">
+                                <div class="specs-card-content">
+                                    <div class="spec-column">
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Materials</span>
+                                            <span class="specs-regular">Satin aluminium, ASA, PETG, Pine Wood</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Reinforcement</span>
+                                            <span class="specs-regular">Satin aluminium</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Frame</span>
+                                            <span class="specs-regular">ASA (Acrylonitrile Styrene Acrylate)</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Lid</span>
+                                            <span class="specs-regular">5mm Tempered Glass</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Eye Protection</span>
+                                            <span class="specs-regular">4mm Acrylic in Lid</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="spec-column">
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Dimentions</span>
+                                            <span class="specs-regular">900mm (35.5 in)</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Depth</span>
+                                            <span class="specs-regular">600mm (23.6 in)</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Height</span>
+                                            <span class="specs-regular">157mm (6.1 in)</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Weight</span>
+                                            <span class="specs-regular">25 kg</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="spec-column">
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Color</span>
+                                            <span class="specs-regular">Silver and Black</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Finish</span>
+                                            <span class="specs-regular">Matte</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">File Transfer</span>
+                                            <span class="specs-regular">Wireless + USB</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Adjustable Z</span>
+                                            <span class="specs-regular">Automatic</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Max Thickness</span>
+                                            <span class="specs-regular">&#8734;</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Cut Thickness</span>
+                                            <span class="specs-regular">Plywood - 30mm</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="spec-column">
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Laser Type</span>
+                                            <span class="specs-regular">CO2 Laser</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Laser Power</span>
+                                            <span class="specs-regular">50W</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Gantry</span>
+                                            <span class="specs-regular">Cartesian Movement</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Cooling</span>
+                                            <span class="specs-regular">Water Cooled</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Radiator Size</span>
+                                            <span class="specs-regular">320mm</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="specs-bold">Air Assist</span>
+                                            <span class="specs-regular">Yes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="padding-global">
+                <div class="w-layout-blockcontainer container w-container">
+                    <div class="phase-cards-wrapper">
+                        <div class="phase-cards-header">
+                            <!--
+                            
+                            <a href="/features" class="read-more-tag w-inline-block"
+                                ><div class="text-size-small text-weight-bold">More AI models</div>
+                                <div class="vertical-line-tag"></div>
+                                <div class="read-more-button">
+                                    <div class="opacity-50">
+                                        <div class="text-size-small text-weight-bold">Read more</div>
+                                    </div>
+                                    <img
+                                        loading="lazy"
+                                        src="images/66f30c8d2ac082d2aee64c3f_Read%20More%20Arrow.svg"
+                                        alt="Arrow"
+                                        class="arrow" /></div
+                            ></a>
+
+                            -->
+
+                            <div class="header">
+                                <div class="heading-4 text-weight-medium">Design Stages</div>
+                                <div class="opacity-60">
+                                    <div class="max-width-40ch">
+                                        <div>Explore my three-phase approach from design to manufacture.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phase-cards-grid">
+                            <div
+                                id="w-node-_0a0b49af-23b0-5822-d319-3cf64f7103f3-aee64c2d"
+                                data-w-id="0a0b49af-23b0-5822-d319-3cf64f7103f3"
+                                style="opacity: 0"
+                                class="phase-cards">
+                                <div class="phase-cards-content">
+                                    <div class="text-size-large text-weight-medium">
+                                        Deciding Desktop Dimensions and Sizing
+                                    </div>
+                                    <div>
+                                        The first step involved balancing space efficiency with functionality to create
+                                        an ideal form for both work and hobbyist environments.
+                                    </div>
+                                </div>
+                                <div class="phase-number"><div class="heading-1 text-weight-regular">01</div></div>
+                            </div>
+                            <div
+                                id="w-node-_0a0b49af-23b0-5822-d319-3cf64f7103fc-aee64c2d"
+                                data-w-id="0a0b49af-23b0-5822-d319-3cf64f7103fc"
+                                style="opacity: 0"
+                                class="phase-cards">
+                                <div class="phase-cards-content">
+                                    <div class="text-size-large text-weight-medium">Chosing a Gantary System</div>
+                                    <div>
+                                        next involved the process of selecting a gantry system, emphasizing precision
+                                        and stability for optimal laser cutter performance and setling on a more complex
+                                        yet stable cartesian system.
+                                    </div>
+                                </div>
+                                <div class="phase-number"><div class="heading-1 text-weight-regular">02</div></div>
+                            </div>
+                            <div
+                                id="w-node-_0a0b49af-23b0-5822-d319-3cf64f710405-aee64c2d"
+                                data-w-id="0a0b49af-23b0-5822-d319-3cf64f710405"
+                                style="opacity: 0"
+                                class="phase-cards">
+                                <div class="phase-cards-content">
+                                    <div class="max-width-26ch">
+                                        <div class="text-size-large text-weight-medium">
+                                            Iterating the Design's Parts
+                                        </div>
+                                    </div>
+                                    <div>
+                                        Utilising additive fabrication techniques like Fused Deposition Modeling and
+                                        Digital Light Processing 3D printing to refine each component via a modular
+                                        aproach.
+                                    </div>
+                                </div>
+                                <div class="phase-number"><div class="heading-1 text-weight-regular">03</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="padding-global">
+                <div class="w-layout-blockcontainer container w-container">
+                    <div class="features-wrapper">
+                        <div
+                            class="header"
+                            style="
+                                opacity: 1;
+                                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
+                                    rotateZ(0deg) skew(0deg, 0deg);
+                                transform-style: preserve-3d;
+                            ">
+                            <div class="heading-4 text-weight-bold">Key Aspects the Design</div>
+                            <div class="opacity-60">
+                                <div class="max-width-48ch">
+                                    <div>
+                                        Uncover the essential elements that shaped my laser cutter design, blending
+                                        innovation with practicality
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="features-component">
+                            <div class="features-vantages">
+                                <div class="features-vantages-content">
+                                    <div
+                                        class="features-heading-wrapper"
+                                        style="
+                                            opacity: 1;
+                                            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                            transform-style: preserve-3d;
+                                        ">
+                                        <div class="features-icon-wrapper">
+                                            <img
+                                                loading="lazy"
+                                                src="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c64_Icon-1.svg"
+                                                alt="Icon" />
+                                        </div>
+                                        <div class="features-heading align-left">
+                                            <div class="heading-6 text-weight-medium">Magnetic Compatability</div>
+                                            <div class="text-size-medium">
+                                                Experience the power of efficiency with a thoughtfully compact design,
+                                                perfect for any desktop workspace.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="check-list"
+                                        style="
+                                            opacity: 1;
+                                            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                            transform-style: preserve-3d;
+                                        ">
+                                        <div class="check-item">
+                                            <div class="check-icon-wrap">
+                                                <img
+                                                    width="13.996087074279785"
+                                                    height="12.25517749786377"
+                                                    alt="Icon"
+                                                    src="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c65_Check%20Icon.svg"
+                                                    loading="lazy"
+                                                    class="check-icon" />
+                                            </div>
+                                            <div class="text-size-medium">Small Desktop Formfactor</div>
+                                        </div>
+                                        <div class="check-item">
+                                            <div class="check-icon-wrap">
+                                                <img
+                                                    width="13.996087074279785"
+                                                    height="12.25517749786377"
+                                                    alt="Icon"
+                                                    src="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c65_Check%20Icon.svg"
+                                                    loading="lazy"
+                                                    class="check-icon" />
+                                            </div>
+                                            <div class="text-size-medium">Lightweight yet Strong</div>
+                                        </div>
+                                        <div class="check-item">
+                                            <div class="check-icon-wrap">
+                                                <img
+                                                    width="13.996087074279785"
+                                                    height="12.25517749786377"
+                                                    alt="Icon"
+                                                    src="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c65_Check%20Icon.svg"
+                                                    loading="lazy"
+                                                    class="check-icon" />
+                                            </div>
+                                            <div class="text-size-medium">Inbuilt Airfiltration and Watercooling</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="features-image-container">
+                                    <div
+                                        href="#"
+                                        class="features-image-wrapper-wide"
+                                        style="
+                                            opacity: 1;
+                                            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                            transform-style: preserve-3d;
+                                        ">
+                                        <img
+                                            sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 56vw"
+                                            
+                                            alt="Features Image"
+                                            src="images/Catan/Catan_1.png"
+                                            loading="lazy"
+                                            class="image"
+                                            style="
+                                                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                                transform-style: preserve-3d;
+                                            " />
+                                        <div class="gradient-overlay bigger"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="features-vantages">
+                                <div class="features-image-container">
+                                    <div
+                                        href="#"
+                                        class="features-image-wrapper-wide"
+                                        style="
+                                            opacity: 1;
+                                            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                            transform-style: preserve-3d;
+                                        ">
+                                        <img
+                                            sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 56vw"
+                                            
+                                            alt="Features Image"
+                                            src="images/Catan/Catan_3.png"
+                                            loading="lazy"
+                                            class="image"
+                                            style="
+                                                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                                transform-style: preserve-3d;
+                                            " />
+                                        <div class="gradient-overlay bigger"></div>
+                                    </div>
+                                </div>
+                                <div class="features-vantages-content">
+                                    <div
+                                        class="features-heading-wrapper"
+                                        style="
+                                            opacity: 1;
+                                            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                            transform-style: preserve-3d;
+                                        ">
+                                        <div class="features-icon-wrapper">
+                                            <img
+                                                loading="lazy"
+                                                src="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c63_Icon.svg"
+                                                alt="Icon" />
+                                        </div>
+                                        <div class="features-heading align-left">
+                                            <div class="heading-6 text-weight-medium">Infinate Playability</div>
+                                            <div class="text-size-medium">
+                                                Harness the power of a 50W industrial-strength CO2 laser, featuring a
+                                                removable bottle for versatile engraving and cutting of any material
+                                                size all in a desktop form.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="check-list"
+                                        style="
+                                            opacity: 1;
+                                            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                            transform-style: preserve-3d;
+                                        ">
+                                        <div class="check-item">
+                                            <div class="check-icon-wrap">
+                                                <img
+                                                    width="13.996087074279785"
+                                                    height="12.25517749786377"
+                                                    alt="Icon"
+                                                    src="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c65_Check%20Icon.svg"
+                                                    loading="lazy"
+                                                    class="check-icon" />
+                                            </div>
+                                            <div class="text-size-medium">50W CO2 Laser</div>
+                                        </div>
+                                        <div class="check-item">
+                                            <div class="check-icon-wrap">
+                                                <img
+                                                    width="13.996087074279785"
+                                                    height="12.25517749786377"
+                                                    alt="Icon"
+                                                    src="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c65_Check%20Icon.svg"
+                                                    loading="lazy"
+                                                    class="check-icon" />
+                                            </div>
+                                            <div class="text-size-medium">Inbuilt Air Assist</div>
+                                        </div>
+                                        <div class="check-item">
+                                            <div class="check-icon-wrap">
+                                                <img
+                                                    width="13.996087074279785"
+                                                    height="12.25517749786377"
+                                                    alt="Icon"
+                                                    src="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c65_Check%20Icon.svg"
+                                                    loading="lazy"
+                                                    class="check-icon" />
+                                            </div>
+                                            <div class="text-size-medium">
+                                                Removable Base to Accomidate any Material
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="features-vantages">
+                                <div class="features-vantages-content">
+                                    <div
+                                        class="features-heading-wrapper"
+                                        style="
+                                            opacity: 1;
+                                            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                            transform-style: preserve-3d;
+                                        ">
+                                        <div class="features-icon-wrapper">
+                                            <img
+                                                loading="lazy"
+                                                src="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c63_Icon.svg"
+                                                alt="Icon" />
+                                        </div>
+                                        <div class="features-heading align-left">
+                                            <div class="heading-6 text-weight-medium">High Detail Finish</div>
+                                            <div class="text-size-medium">
+                                                Admire the sleek finish that combines aesthetics and functionality,
+                                                elevating it's apperance in any space.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="check-list"
+                                        style="
+                                            opacity: 1;
+                                            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                            transform-style: preserve-3d;
+                                        ">
+                                        <div class="check-item">
+                                            <div class="check-icon-wrap">
+                                                <img
+                                                    width="13.996087074279785"
+                                                    height="12.25517749786377"
+                                                    alt="Icon"
+                                                    src="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c65_Check%20Icon.svg"
+                                                    loading="lazy"
+                                                    class="check-icon" />
+                                            </div>
+                                            <div class="text-size-medium">Satin Aluminium Frame</div>
+                                        </div>
+                                        <div class="check-item">
+                                            <div class="check-icon-wrap">
+                                                <img
+                                                    width="13.996087074279785"
+                                                    height="12.25517749786377"
+                                                    alt="Icon"
+                                                    src="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c65_Check%20Icon.svg"
+                                                    loading="lazy"
+                                                    class="check-icon" />
+                                            </div>
+                                            <div class="text-size-medium">Full Glass Viewing Top</div>
+                                        </div>
+                                        <div class="check-item">
+                                            <div class="check-icon-wrap">
+                                                <img
+                                                    width="13.996087074279785"
+                                                    height="12.25517749786377"
+                                                    alt="Icon"
+                                                    src="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64c65_Check%20Icon.svg"
+                                                    loading="lazy"
+                                                    class="check-icon" />
+                                            </div>
+                                            <div class="text-size-medium">
+                                                LED Accenting for Notifcations and Visuals
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="features-image-container">
+                                    <div
+                                        href="#"
+                                        class="features-image-wrapper-wide"
+                                        style="
+                                            opacity: 1;
+                                            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                            transform-style: preserve-3d;
+                                        ">
+                                        <img
+                                            sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 56vw"
+                                            
+                                            alt="Features Image"
+                                            src="images/Catan/Catan_2.png"
+                                            loading="lazy"
+                                            class="image"
+                                            style="
+                                                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                                transform-style: preserve-3d;
+                                            " />
+                                        <div class="gradient-overlay bigger"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--
+                            <div
+                                data-w-id="de8d51a1-a9f1-e8fc-1d9c-a4336e447a0b"
+                                style="
+                                    opacity: 1;
+                                    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
+                                        rotateZ(0deg) skew(0deg, 0deg);
+                                    transform-style: preserve-3d;
+                                "
+                                class="double-button-component margin-top-button-hero">
+                                <a href="/contact" class="primary-button w-inline-block"
+                                    ><div class="relative">
+                                        <div class="text-size-small text-weight-bold">Get Started</div>
+                                    </div>
+                                    <div
+                                        class="button-elipse"
+                                        style="
+                                            transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                            transform-style: preserve-3d;
+                                        "></div></a
+                                ><a href="/about" class="secondary-button w-inline-block"
+                                    ><div class="button-wrapper">
+                                        <div class="secondary-button-text">
+                                            <div class="text-weight-bold text-size-small">About Us</div>
+                                        </div>
+                                        <div class="button-icon">
+                                            <div class="icon-wrapper">
+                                                <img
+                                                    loading="lazy"
+                                                    src="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64ccb_Arrow.svg"
+                                                    alt="Arrow"
+                                                    class="icon"
+                                                    style="
+                                                        transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1)
+                                                            rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                                        transform-style: preserve-3d;
+                                                    " /><img
+                                                    loading="lazy"
+                                                    src="https://cdn.prod.website-files.com/66f30c8d2ac082d2aee64be2/66f30c8d2ac082d2aee64ccb_Arrow.svg"
+                                                    alt="Arrow"
+                                                    class="icon"
+                                                    style="
+                                                        transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1)
+                                                            rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                                        transform-style: preserve-3d;
+                                                    " />
+                                            </div>
+                                        </div>
+                                        <div class="button-icon absolute" style="width: 0%; opacity: 0"></div></div
+                                ></a>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+
+                    <div class="team-wrapper">
+                        <div class="team-header">
+                            <!--
+                            
+                            <a href="/features" class="read-more-tag w-inline-block"
+                                ><div class="text-size-small text-weight-bold">More AI models</div>
+                                <div class="vertical-line-tag"></div>
+                                <div class="read-more-button">
+                                    <div class="opacity-50">
+                                        <div class="text-size-small text-weight-bold">Read more</div>
+                                    </div>
+                                    <img
+                                        loading="lazy"
+                                        src="images/66f30c8d2ac082d2aee64c3f_Read%20More%20Arrow.svg"
+                                        alt="Arrow"
+                                        class="arrow" /></div
+                            ></a>
+                            
+                            -->
+
+                            <div class="header">
+                                <div class="heading-4 text-weight-medium">Production Methods Used</div>
+                                <div class="opacity-60">
+                                    <div class="max-width-40ch">
+                                        <div>
+                                            Discover the innovative production methods that brought this project to
+                                            life, blending precision and efficiency at every turn.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-grid">
+                            <div class="children-perspective">
+                                <div
+                                    data-w-id="4839229c-ed5d-d4e7-2648-ca5018eb3ed1"
+                                    style="opacity: 0"
+                                    class="team-card">
+                                    <div class="team-image">
+                                        <img
+                                            sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 29vw"
+                                            srcset="images/LaserCutter/Panel-Fasten.jpg 866w"
+                                            alt="Team Images"
+                                            src="images/LaserCutter/Panel-Fasten.jpg"
+                                            loading="lazy" />
+                                    </div>
+                                    <div class="team-content">
+                                        <div class="text-size-large text-weight-medium">Additive Manufacturing</div>
+                                        <div class="opacity-80">
+                                            <div class="text-size-small text-weight-medium caps">
+                                                Fused Deposition Modeling and Digital Light Processing
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                id="w-node-_4839229c-ed5d-d4e7-2648-ca5018eb3eda-aee64c2d"
+                                class="children-perspective">
+                                <div
+                                    id="w-node-_4839229c-ed5d-d4e7-2648-ca5018eb3edb-aee64c2d"
+                                    data-w-id="4839229c-ed5d-d4e7-2648-ca5018eb3edb"
+                                    style="opacity: 0"
+                                    class="team-card">
+                                    <div class="team-image">
+                                        <img
+                                            sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 29vw"
+                                            srcset="images/LaserCutter/IMG_4389.jpg 868w"
+                                            alt="Team Images"
+                                            src="images/LaserCutter/IMG_4389.jpg"
+                                            loading="lazy" />
+                                    </div>
+                                    <div class="team-content">
+                                        <div class="text-size-large text-weight-medium">Electrical Engeneering</div>
+                                        <div class="opacity-80">
+                                            <div class="text-size-small text-weight-medium caps">
+                                                Arduino ESP Programming and component wiring
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                id="w-node-_4839229c-ed5d-d4e7-2648-ca5018eb3ee4-aee64c2d"
+                                class="children-perspective">
+                                <div
+                                    id="w-node-_4839229c-ed5d-d4e7-2648-ca5018eb3ee5-aee64c2d"
+                                    data-w-id="4839229c-ed5d-d4e7-2648-ca5018eb3ee5"
+                                    style="opacity: 0"
+                                    class="team-card">
+                                    <div class="team-image">
+                                        <img
+                                            sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 29vw"
+                                            srcset="images/LaserCutter/Edge-Curve.jpg 866w"
+                                            alt="Team Images"
+                                            src="images/LaserCutter/Edge-Curve.jpg"
+                                            loading="lazy" />
+                                    </div>
+                                    <div class="team-content">
+                                        <div class="text-size-large text-weight-medium">Metalworking</div>
+                                        <div class="opacity-80">
+                                            <div class="text-size-small text-weight-medium caps">
+                                                Form Shaping and cutting
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+   <section>
+    <div class="padding-global">
+        <div class="w-layout-blockcontainer container w-container">
+            <div class="steps-wrapper">
+                <div class="header">
+                    <div class="heading-4 text-weight-medium">
+                        Construction Process
+                    </div>
+                    <div class="opacity-60">
+                        <div class="max-width-42ch">
+                            <div>Ground up Construction Process</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+                
+                
+                <div class="steps-carousel-outer-wrapper">
+                <div class="steps-carousel-wrapper">
+                    <div class="steps-carousel-stack-component">
+                        <!-- Empty card slot -->
+                        <div class="steps-carousel-item empty-card"></div>
+
+                        <div class="steps-carousel-item">
+                            <div class="steps-carousel-card">
+                                <div class="left-carousel-full-content">
+                                    <div class="steps-carousel-content">
+                                        
+                                        <div class="max-width-40ch">
+                                            <div class="heading-4 text-weight-medium">Final Finishings</div>
+                                            <div class="heading-4 text-weight-medium"></div>
+                                        </div>
+                                        <div class="steps-carousel-description">
+                                            <div>
+                                                Finally, the lighting, interior crinkle concrete paneling, and other furnishings and facilities are installed, making the building habitable and finished.
+                                            </div>
+                                            <div>
+                                                Hover for design development
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="center-carousel-full">
+                                    <div class="steps-carousel-image">
+                                        <img src="/images/Hydrogen-Horizons/Construction/Cell%20Beams%20and%20Concrete%20Mould%20Stage%20V2.png" class="image-default" alt="Default Image">
+                                        <img src="/images/Hydrogen-Horizons/Construction/Concrete-Column-Stage.png" class="image-hover" alt="Hover Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="steps-carousel-item">
+                            <div class="steps-carousel-card">
+                               <div class="left-carousel-full-content">
+                                    <div class="steps-carousel-content">
+                                        
+                                        <div class="max-width-40ch">
+                                            <div class="heading-4 text-weight-medium">Final Finishings</div>
+                                            <div class="heading-4 text-weight-medium"></div>
+                                        </div>
+                                        <div class="steps-carousel-description">
+                                            <div>
+                                                Finally, the lighting, interior crinkle concrete paneling, and other furnishings and facilities are installed, making the building habitable and finished.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="center-carousel-full">
+                                    <div class="steps-carousel-image">
+                                        <img src="/images/Hydrogen-Horizons/Construction/Cell%20Beams%20and%20Concrete%20Mould%20Stage%20V2.png" class="" alt="Default Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="steps-carousel-item">
+                            <div class="steps-carousel-card">
+                               <div class="left-carousel-full-content">
+                                    <div class="steps-carousel-content">
+                                        
+                                        <div class="max-width-40ch">
+                                            <div class="heading-4 text-weight-medium">Final Finishings</div>
+                                            <div class="heading-4 text-weight-medium"></div>
+                                        </div>
+                                        <div class="steps-carousel-description">
+                                            <div>
+                                                Finally, the lighting, interior crinkle concrete paneling, and other furnishings and facilities are installed, making the building habitable and finished.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="center-carousel-full">
+                                    <div class="steps-carousel-image">
+                                        <img
+                                            sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, 47vw"
+                                            alt="Stack Image"
+                                            src="images/Hydrogen-Horizons/Construction/Final%20Stage%20V2.png"
+                                            loading="lazy"
+                                            class="image" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Add more items as needed -->
+                        
+                        <div class="steps-carousel-item empty-card"></div>
+                    </div>
+                </div>
+                </div>
+            
+    </div>
+</section>
+
+        
+        
+
+        <section>
+            <div id="contactContent"></div>
+        </section>
+        
+        <script src="js/jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript" crossorigin="anonymous"></script>
+        <script src="js/webflow.e856b9eae.js" type="text/javascript"></script>
+    </body>
+</html>
+

@@ -32,6 +32,14 @@
         <script src="js/jquery-3.5.1.min.dc5e7f18c8.js"></script>
         <script src="./Loader.js"></script>
         
+        <!-- Smooth Scroll Script -->
+        <script type="module" src="/js/lenis-init.mjs"></script>
+        <link rel="stylesheet" href="css/cursor.css">
+        <script src="js/cursor.js" defer></script>
+        <!-------------------------->
+        
+
+        
         <script type="text/javascript">
             !(function (o, c) {
                 var n = c.documentElement,
@@ -43,7 +51,14 @@
         </script>
         <link href="images/DesignLogo.jpg" rel="shortcut icon" type="image/x-icon" />
         <link href="images/DesignLogo.jpg" rel="apple-touch-icon" />
-
+        
+        
+        
+       
+        
+        
+        
+        
         <!--
         <script src="TypeScript.js"></script>
         <script src="TextChangeScript.js"></script>
@@ -85,6 +100,7 @@
     <body>
         
         
+        
         <div id="preloader">
             <img id="loader-frame" src="/media/Loading-Logo-Looped.gif" alt="Loading...">
         </div>
@@ -92,20 +108,22 @@
         
         
         
-        <header-bar class="banner-text" id="navbar">
-            <div class="logo">
-                <a
-                    href="/"
-                    data-w-id="6deb3682-e1f7-9f5f-adeb-87fc1448026f"
-                    aria-current="page"
-                    class="brand w-nav-brand w--current"
-                    ><img src="images/DesignLogo.jpg" loading="lazy" alt="Logo Navbar"
-                /></a>
-            </div>
-            
-            <div id="navbarContent"></div>
-            
-        </header-bar>
+        
+        <div class="background">
+        
+        <!-- Header Bar -->
+        <div id="header-placeholder"></div>
+        <script>
+          fetch("/headerbar.html")
+            .then(response => response.text())
+            .then(data => {
+              const temp = document.createElement('div');
+              temp.innerHTML = data.trim();
+              document.getElementById("header-placeholder").replaceWith(temp.firstChild);
+            });
+        </script>
+
+
         
         
         
@@ -152,6 +170,8 @@
                 </div>
             </div>
         </section>
+            
+            
         <div class="overflow-hidden">
             <section>
                 
@@ -210,6 +230,8 @@
             </section>
         </div>
 
+        
+            
         <section id="about">
             <div class="padding-global">
                 <div class="w-layout-blockcontainer container w-container">
@@ -253,26 +275,37 @@
                             </div>
                         </div>
                     </div>
-
+                    
+                    
+                    
+                    
+                    
+                    
                     <div class="home-features-wrapper">
                         <div class="header who-am-i-block">
                            
                         </div>
 
                         <div class="header">
-                            <div class="heading-4 text-weight-bold">My Goals as a Designer</div>
-                            <div class="opacity-60">
-                                <div class="max-width-48ch">
-                                    <div class="text-size-regular">
-                                        The key goals that drive my passion and design decisions for each and every
-                                        project
+                            
+                            
+                             
+                            <div>
+                                <div class="heading-4 text-weight-bold ">My Goals as a Designer</div>
+                                <div class="opacity-60">
+                                    <div class="max-width-48ch">
+                                        <div class="text-size-regular">
+                                            The key goals that drive my passion and design decisions for each and every
+                                            project
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
                         <div class="features-grid">
-                            <div id="w-node-f1ebc3db-c32c-0977-63ac-12a3728dfe36-aee64be3" class="features first">
-                                <div class="text-size-large">01</div>
+                            <div id="w-node-f1ebc3db-c32c-0977-63ac-12a3728dfe36-aee64be3" class="features first wide-spread-hover">
+                                <div class="text-size-large hover-target">01</div>
                                 <div class="features-content">
                                     <div class="text-weight-medium">Sustanability</div>
                                     <div class="opacity-70">
@@ -280,8 +313,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="w-node-f1ebc3db-c32c-0977-63ac-12a3728dfe3f-aee64be3" class="features second">
-                                <div class="text-size-large">02</div>
+                            <div id="w-node-f1ebc3db-c32c-0977-63ac-12a3728dfe3f-aee64be3" class="features second wide-spread-hover">
+                                <div class="text-size-large hover-target">02</div>
                                 <div class="features-content">
                                     <div class="text-weight-medium">Emerging Technology</div>
                                     <div class="opacity-70">
@@ -292,8 +325,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="w-node-f1ebc3db-c32c-0977-63ac-12a3728dfe48-aee64be3" class="features third">
-                                <div class="text-size-large">03</div>
+                            <div id="w-node-f1ebc3db-c32c-0977-63ac-12a3728dfe48-aee64be3" class="features third wide-spread-hover">
+                                <div class="text-size-large hover-target">03</div>
                                 <div class="features-content">
                                     <div class="text-weight-medium">Advancing my Skills</div>
                                     <div class="opacity-70">
@@ -304,8 +337,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="w-node-f1ebc3db-c32c-0977-63ac-12a3728dfe51-aee64be3" class="features fourth">
-                                <div class="text-size-large">04</div>
+                            <div id="w-node-f1ebc3db-c32c-0977-63ac-12a3728dfe51-aee64be3" class="features fourth wide-spread-hover">
+                                <div class="text-size-large hover-target">04</div>
                                 <div class="features-content">
                                     <div class="text-weight-medium">Creating Bespoke Designs</div>
                                     <div class="opacity-70">
@@ -322,386 +355,6 @@
             </div>
         </section>
 
-        <!--
-        
-        <section>
-            <div class="padding-global">
-                <div class="w-layout-blockcontainer container w-container">
-                    <div class="testimonial-wrapper">
-                        <div class="testimonial-component">
-                            <a href="/features" class="read-more-tag w-inline-block"
-                                ><div class="text-size-small text-weight-bold">More AI models</div>
-                                <div class="vertical-line-tag"></div>
-                                <div class="read-more-button">
-                                    <div class="opacity-50">
-                                        <div class="text-size-small text-weight-bold">Read more</div>
-                                    </div>
-                                    <img
-                                        loading="lazy"
-                                        src="images/66f45c8d2ac082d2aee64c3f_Read%20More%20Arrow.svg"
-                                        alt="Arrow"
-                                        class="arrow" /></div
-                            ></a>
-                            
-                        </div>
-                        
-
-
-
-                        <div class="testimonial-grid">
-                            <div
-                                id="w-node-_525f333e-16b4-a716-1c03-a45f2fadfa63-aee64be3"
-                                data-w-id="525f333e-16b4-a716-1c03-a45f2fadfa63"
-                                style="opacity: 0"
-                                class="testimonial-card">
-                                <div class="quote-icon">
-                                    <img
-                                        loading="lazy"
-                                        src="images/66f30c8d2ac082d2aee64c45_Quote%20Icon.svg"
-                                        alt="Quote Icon" />
-                                </div>
-                                <div class="testimonial-content">
-                                    <div class="testimonial-quote">
-                                        <div class="text-size-medium">
-                                            The AI tools from Entropy have revolutionized our workflow. Their
-                                            adaptability and precision have set a new standard for our operations.
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-person-info">
-                                        <div class="testimonial-image">
-                                            <img
-                                                loading="lazy"
-                                                src="images/66f30c8d2ac082d2aee64cd9_Testimonial%2001.jpg"
-                                                alt="Image" />
-                                        </div>
-                                        <div class="testimonial-info">
-                                            <div class="text-size-small text-weight-bold">Alex Johnson</div>
-                                            <div class="opacity-60">
-                                                <div class="text-size-small">CTO at TechInnovate</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div
-                                id="w-node-_525f333e-16b4-a716-1c03-a45f2fadfa73-aee64be3"
-                                data-w-id="525f333e-16b4-a716-1c03-a45f2fadfa73"
-                                style="opacity: 0"
-                                class="testimonial-card">
-                                <div class="quote-icon">
-                                    <img
-                                        loading="lazy"
-                                        src="images/66f30c8d2ac082d2aee64c45_Quote%20Icon.svg"
-                                        alt="Quote Icon"
-                                        class="icon" />
-                                </div>
-                                <div class="testimonial-content">
-                                    <div class="testimonial-quote">
-                                        <div class="text-size-medium">
-                                            We’ve seen a significant boost in efficiency since integrating Entropy's AI
-                                            solutions. The personalized features truly enhance our customer interactions
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-person-info">
-                                        <div class="testimonial-image">
-                                            <img
-                                                loading="lazy"
-                                                src="images/66f30c8d2ac082d2aee64cd6_Testimonial%2003.jpg"
-                                                alt="Image" />
-                                        </div>
-                                        <div class="testimonial-info">
-                                            <div class="text-size-small text-weight-bold">Emily Davis</div>
-                                            <div class="opacity-60">
-                                                <div class="text-size-small">Marketing Director at RetailPulse</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-_525f333e-16b4-a716-1c03-a45f2fadfa83-aee64be3"
-                                data-w-id="525f333e-16b4-a716-1c03-a45f2fadfa83"
-                                style="opacity: 0"
-                                class="testimonial-card">
-                                <div class="quote-icon">
-                                    <img
-                                        loading="lazy"
-                                        src="images/66f30c8d2ac082d2aee64c45_Quote%20Icon.svg"
-                                        alt="Quote Icon"
-                                        class="icon" />
-                                </div>
-                                <div class="testimonial-content">
-                                    <div class="testimonial-quote">
-                                        <div class="text-size-medium">
-                                            The predictive analytics provided by Entropy have been a game-changer for
-                                            our strategic planning. We’re making more informed decisions than ever
-                                            before.
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-person-info">
-                                        <div class="testimonial-image">
-                                            <img
-                                                loading="lazy"
-                                                src="images/66f30c8d2ac082d2aee64cd8_Testimonial%2004.jpg"
-                                                alt="Image" />
-                                        </div>
-                                        <div class="testimonial-info">
-                                            <div class="text-size-small text-weight-bold">Michael Lee</div>
-                                            <div class="opacity-60">
-                                                <div class="text-size-small">CTO at TechInnovate</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-_525f333e-16b4-a716-1c03-a45f2fadfa93-aee64be3"
-                                data-w-id="525f333e-16b4-a716-1c03-a45f2fadfa93"
-                                style="opacity: 0"
-                                class="testimonial-card hide-landscape">
-                                <div class="quote-icon">
-                                    <img
-                                        loading="lazy"
-                                        src="images/66f30c8d2ac082d2aee64c45_Quote%20Icon.svg"
-                                        alt="Quote Icon"
-                                        class="icon" />
-                                </div>
-                                <div class="testimonial-content">
-                                    <div class="testimonial-quote">
-                                        <div class="text-size-medium">
-                                            The visual recognition technology has streamlined our processes and provided
-                                            us with valuable insights. Entropy is a key partner in our success.
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-person-info">
-                                        <div class="testimonial-image">
-                                            <img
-                                                loading="lazy"
-                                                src="images/66f30c8d2ac082d2aee64cd7_Testimonial%2002.jpg"
-                                                alt="Image" />
-                                        </div>
-                                        <div class="testimonial-info">
-                                            <div class="text-size-small text-weight-bold">Sarah Martinez</div>
-                                            <div class="opacity-60">
-                                                <div class="text-size-small">
-                                                    Operations Manager at Visionary Studios
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-_525f333e-16b4-a716-1c03-a45f2fadfaa3-aee64be3"
-                                data-w-id="525f333e-16b4-a716-1c03-a45f2fadfaa3"
-                                style="opacity: 0"
-                                class="testimonial-card hide-landscape">
-                                <div class="quote-icon">
-                                    <img
-                                        loading="lazy"
-                                        src="images/66f30c8d2ac082d2aee64c45_Quote%20Icon.svg"
-                                        alt="Quote Icon"
-                                        class="icon" />
-                                </div>
-                                <div class="testimonial-content">
-                                    <div class="testimonial-quote">
-                                        <div class="text-size-medium">
-                                            Thanks to Entropy’s AI-driven personalization, we’ve seen a dramatic
-                                            increase in customer satisfaction and engagement. It’s truly exceptional.
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-person-info">
-                                        <div class="testimonial-image">
-                                            <img
-                                                loading="lazy"
-                                                src="images/66f30c8d2ac082d2aee64cd8_Testimonial%2004.jpg"
-                                                alt="Image" />
-                                        </div>
-                                        <div class="testimonial-info">
-                                            <div class="text-size-small text-weight-bold">James Wilson</div>
-                                            <div class="opacity-60">
-                                                <div class="text-size-small">
-                                                    Customer Experience Lead at BrightPath
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                id="w-node-_525f333e-16b4-a716-1c03-a45f2fadfab3-aee64be3"
-                                data-w-id="525f333e-16b4-a716-1c03-a45f2fadfab3"
-                                style="opacity: 0"
-                                class="testimonial-card hide-landscape">
-                                <div class="quote-icon">
-                                    <img
-                                        loading="lazy"
-                                        src="images/66f30c8d2ac082d2aee64c45_Quote%20Icon.svg"
-                                        alt="Quote Icon"
-                                        class="icon" />
-                                </div>
-                                <div class="testimonial-content">
-                                    <div class="testimonial-quote">
-                                        <div class="text-size-medium">
-                                            The cybersecurity solutions from Entropy offer unparalleled protection for
-                                            our data. We feel confident and secure knowing our systems are in good
-                                            hands.
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-person-info">
-                                        <div class="testimonial-image">
-                                            <img
-                                                loading="lazy"
-                                                src="images/66f30c8d2ac082d2aee64cda_Testimonial%2005.jpg"
-                                                alt="Image" />
-                                        </div>
-                                        <div class="testimonial-info">
-                                            <div class="text-size-small text-weight-bold">John Thompson</div>
-                                            <div class="opacity-60">
-                                                <div class="text-size-small">IT Director at SecureNet Solutions</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-            
-        -->
-
-        <!--
-        -->
-
-        <!--
-        <section>
-            <div class="padding-global">
-                <div class="w-layout-blockcontainer container medium w-container">
-                    <div class="features-cards-wrapper">
-                        <div class="header">
-                            <div class="heading-4 text-weight-bold top-spacer-block" >
-                                Pushing the Boundaries of Design
-                            </div>
-                            <div class="opacity-60">
-                                <div class="max-width-46ch">
-                                    <div class="text-size-regular">
-                                        Continuously pushing the boundaries of Architectural and Product Design
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="home-integrations-wrapper">
-                            <div class="integrations-content-component">
-                                <div
-                                    data-w-id="87eb6bc4-11f4-c138-41ab-f278fcfa9472"
-                                    style="opacity: 0"
-                                    class="integrations-block first">
-                                    <div class="integrations-image">
-                                        <img
-                                            sizes="(max-width: 479px) 73vw, (max-width: 767px) 75vw, (max-width: 991px) 384.75px, 37vw"
-                                            srcset="
-                                                images/LaserCutter/OpenLid.png           808w
-                                            "
-                                            alt="Image Features"
-                                            src="images/LaserCutter/OpenLid.png"
-                                            loading="lazy" />
-                                    </div>
-                                    <div class="integrations-content">
-                                        <div class="text-size-large">Using Leading Technology for Fabrication</div>
-                                        <div class="opacity-70">
-                                            <div class="max-width-50ch">
-                                                <div class="text-size-regular">
-                                                    Using leading technology elevateing the fabrication process, delivering precision and efficiency in each part's creation.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    data-w-id="87eb6bc4-11f4-c138-41ab-f278fcfa947c"
-                                    style="opacity: 0"
-                                    class="integrations-block second">
-                                    <div class="integrations-image">
-                                        <img
-                                            sizes="(max-width: 479px) 73vw, (max-width: 991px) 304.921875px, 24vw"
-                                            srcset="
-                                                
-                                                images/TVCabinate/Scene8_min.jpg        526w
-                                            "
-                                            alt="Image Features"
-                                            src="images/TVCabinate/Scene8_min.jpg"
-                                            loading="lazy" />
-                                    </div>
-                                    <div class="integrations-content">
-                                        <div class="text-size-large">Making Bespoke Furniture</div>
-                                        <div class="opacity-70">
-                                            <div class="max-width-50ch">
-                                                <div class="text-size-regular">
-                                                    Where customisation meets functionality to create unique, tailored pieces.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="integrations-content-component">
-                                <div
-                                    data-w-id="87eb6bc4-11f4-c138-41ab-f278fcfa9487"
-                                    style="opacity: 0"
-                                    class="integrations-block second">
-                                    <div class="integrations-image">
-                                        <img
-                                            loading="lazy"
-                                            src="images/TVCabinate/IMG_6713.jpg"
-                                            alt="Image Features" />
-                                    </div>
-                                    <div class="integrations-content">
-                                        <div class="text-size-large">Additive Fabrication</div>
-                                        <div class="opacity-70">
-                                            <div class="max-width-50ch">
-                                                <div class="text-size-regular">
-                                                    Allowing for complex geometries and reduced material waste in the production process.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    data-w-id="87eb6bc4-11f4-c138-41ab-f278fcfa9491"
-                                    style="opacity: 0"
-                                    class="integrations-block first">
-                                    <div class="integrations-image">
-                                        <img
-                                            sizes="(max-width: 479px) 73vw, 339.640625px"
-                                            srcset="
-                                                images/Hydrogen-Horizons/Enviromental-Study.png           726w
-                                            "
-                                            alt="Image Features"
-                                            src="images/66f30c8d2ac082d2aee64c43_Images%20Cards%2004.jpg"
-                                            loading="lazy" />
-                                    </div>
-                                    <div class="integrations-content">
-                                        <div class="text-size-large">Using Leading Edge Software</div>
-                                        <div class="opacity-70">
-                                            <div class="max-width-50ch">
-                                                <div class="text-size-regular">
-                                                    cutting-edge analysis software streamlines the design process, enhancing accuracy and facilitating informed decision-making throughout development.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-        -->
 
         <section>
             <div class="padding-global">
@@ -710,9 +363,19 @@
                         <div class="experience-header">
                             <div class="heading-4 text-weight-medium">Experience</div>
                         </div>
-                        <div class="topics">
+                        <div class="topics hoverable">
+                            
                             <div
                                 class="topic"
+                                data-subtopics="Rhino CAD, Materialise Majics, Fused Deposition Modeling (FDM), Stereolithography (SLA), Selective Laser Sintering (SLS), High Detail Modelmaking">
+                                <h2>
+                                    <span class="topic-num-font">2025. </span> CAD Support | Foster + Partners</h2>
+                                <p class="topic-subtext-font">2025 - Now | Foster + Partners London</p>
+                                <div class="subtopics-container"></div>
+                            </div>
+                            
+                            <div
+                                class="topic "
                                 data-subtopics="Rhino, 3D Print File Processing, Additive Fabrication Handbook Creation, 3D Printer Setup, File Fixing">
                                 <h2>
                                     <span class="topic-num-font">2024. </span> Advanced Architectual Digital Design
@@ -866,7 +529,7 @@
                             class="steps-stack-component">
                            
                             <div class="steps-item">
-                                <div class="steps-card">
+                                <div class="steps-card hoverable" onclick="window.location.href='/Project%20-%20TV%20Cabinate.html'">
                                     <div class="left-full-content">
                                         <div class="steps-content">
                                             <div class="steps-tag">
@@ -889,14 +552,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a
+                                        <!--<a
                                             href="/Project%20-%20TV%20Cabinate.html"
                                             class="primary-button w-inline-block"
                                             ><div class="relative">
                                                 <div class="text-size-small text-weight-bold">Explore the Project</div>
                                             </div>
                                             <div class="button-elipse"></div
-                                        ></a>
+                                        ></a>-->
                                     </div>
 
                                     <div class="center-full-content">
@@ -918,7 +581,7 @@
                             </div>
 
                             <div class="steps-item">
-                                <div class="steps-card">
+                                <div class="steps-card hoverable" onclick="window.location.href='/Project%20-%20Laser%20Cutter.html'">
                                     <div class="left-full-content">
                                         <div class="steps-content">
                                             <div class="steps-tag">
@@ -941,14 +604,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a
-                                            href="/Project%20-%20Laser%20Cutter.html"
-                                            class="primary-button w-inline-block"
-                                            ><div class="relative">
-                                                <div class="text-size-small text-weight-bold">Explore the Project</div>
-                                            </div>
-                                            <div class="button-elipse"></div
-                                        ></a>
+                                        
                                     </div>
 
                                     <div class="center-full-content">
@@ -970,7 +626,7 @@
                             </div>
                             
                             <div class="steps-item">
-                                <div class="steps-card">
+                                <div class="steps-card hoverable" onclick="window.location.href='/Project%20-%20TV%20Cabinate.html'">
                                     <div class="left-full-content">
                                         <div class="steps-content">
                                             <div class="steps-tag">
@@ -993,14 +649,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a
-                                            href=""
-                                            class="primary-button w-inline-block"
-                                            ><div class="relative">
-                                                <div class="text-size-small text-weight-bold">Explore the Project</div>
-                                            </div>
-                                            <div class="button-elipse"></div
-                                        ></a>
+                                        
                                     </div>
 
                                     <div class="center-full-content">
@@ -1022,7 +671,7 @@
                             </div>
                             
                             <div class="steps-item">
-                                <div class="steps-card">
+                                <div class="steps-card hoverable" onclick="window.location.href='/Project%20-%20Hydrogen%20Horizons.html'">
                                     <div class="left-full-content">
                                         <div class="steps-content">
                                             <div class="steps-tag">
@@ -1044,14 +693,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a
-                                            href="/Project%20-%20Hydrogen%20Horizons.html"
-                                            class="primary-button w-inline-block"
-                                            ><div class="relative">
-                                                <div class="text-size-small text-weight-bold">Explore the Project</div>
-                                            </div>
-                                            <div class="button-elipse"></div
-                                        ></a>
+                                        
                                     </div>
 
                                     <div class="center-full-content">
@@ -1097,12 +739,18 @@
                 </div>
             </div>
         </section>
-
+        
+        
         <section>
             <div id="contactContent"></div>
         </section>
         
-        <script src="js/jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript" crossorigin="anonymous"></script>
+        
         <script src="js/webflow.e856b9eae.js" type="text/javascript"></script>
+        <script src="js/cursor.js" defer></script>
+        
+        <footer id="site-footer"></footer>
+
+            </div>
     </body>
 </html>

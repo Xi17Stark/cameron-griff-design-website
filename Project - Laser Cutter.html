@@ -20,6 +20,14 @@
         <script src="js/jquery-3.5.1.min.dc5e7f18c8.js"></script>
         <script src="./Loader.js"></script>
         
+        
+        <!-- Smooth Scroll Script -->
+        <script type="module" src="/js/lenis-init.mjs"></script>
+        <link rel="stylesheet" href="css/cursor.css">
+        <script src="js/cursor.js" defer></script>
+        <!-------------------------->
+        
+        
         <script type="text/javascript">
             !(function (o, c) {
                 var n = c.documentElement,
@@ -66,24 +74,17 @@
         </div>
         
         
-        <header-bar class="banner-text" id="navbar">
-            <div class="logo">
-                <a
-                    href="/"
-                    data-w-id="6deb3682-e1f7-9f5f-adeb-87fc1448026f"
-                    aria-current="page"
-                    class="brand w-nav-brand w--current"
-                    ><img src="images/DesignLogo.jpg" loading="lazy" alt="Logo Navbar"
-                /></a>
-            </div>
-            <ul>
-                <li><a href="/Home.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact Me</a></li>
-                    <li><a href="/Design Projects.html">Design Projects</a></li>
-                    <li><a href="/Architecture Projects.html">Architecture Projects</a></li>
-            </ul>
-        </header-bar>
+        <!-- Header Bar -->
+        <div id="header-placeholder"></div>
+        <script>
+          fetch("/headerbar.html")
+            .then(response => response.text())
+            .then(data => {
+              const temp = document.createElement('div');
+              temp.innerHTML = data.trim();
+              document.getElementById("header-placeholder").replaceWith(temp.firstChild);
+            });
+        </script>
 
        
         
@@ -180,12 +181,9 @@
                                 <div class="about-features-image">
                                     <img
                                         sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 28vw"
-                                        srcset="
-                                            
-                                            images/LaserCutter/Laser-Head-Photo.jpg       852w
-                                        "
+                                        
                                         alt="Card Image"
-                                        src="images/LaserCutter/Laser-Head-Photo.jpg" 
+                                        src="images/LaserCutter/Laser_head_Back.png" 
                                         loading="lazy"
                                         class="image" />
                                     <div class="mask-frame"></div>
@@ -991,12 +989,9 @@
                                     <div class="team-image">
                                         <img
                                             sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 29vw"
-                                            srcset="
-                                                
-                                                images/LaserCutter/Edge-Curve.jpg             866w
-                                            "
+                                            
                                             alt="Team Images"
-                                            src="images/LaserCutter/Edge-Curve.jpg"
+                                            src="images/LaserCutter/Edge-Curve.png"
                                             loading="lazy" />
                                     </div>
                                     <div class="team-content">

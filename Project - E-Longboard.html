@@ -20,7 +20,15 @@
         
         <script src="js/jquery-3.5.1.min.dc5e7f18c8.js"></script>
         <script src="./Loader.js"></script>
-
+        
+        
+        <!-- Smooth Scroll Script -->
+        <script type="module" src="/js/lenis-init.mjs"></script>
+        <link rel="stylesheet" href="css/cursor.css">
+        <script src="js/cursor.js" defer></script>
+        <!-------------------------->
+        
+        
         <script type="text/javascript">
             !(function (o, c) {
                 var n = c.documentElement,
@@ -37,6 +45,12 @@
         <script src="./ProjectNameFade.js"></script>
         <script src="./ScrollBar.js"></script>
         <script src="./js/Carousel-cards.js"></script>
+        
+        <!-- Smooth Scroll Script -->
+        <script type="module" src="/js/lenis-init.mjs"></script>
+        <link rel="stylesheet" href="css/cursor.css">
+        <script src="js/cursor.js" defer></script>
+        <!-------------------------->
         
         
         
@@ -70,24 +84,17 @@
         </div>
         
 
-        <header-bar class="banner-text" id="navbar">
-            <div class="logo">
-                <a
-                    href="/"
-                    data-w-id="6deb3682-e1f7-9f5f-adeb-87fc1448026f"
-                    aria-current="page"
-                    class="brand w-nav-brand w--current"
-                    ><img src="images/DesignLogo.jpg" loading="lazy" alt="Logo Navbar"
-                /></a>
-            </div>
-            <ul>
-                <li><a href="/Home.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact Me</a></li>
-                    <li><a href="/Design Projects.html">Design Projects</a></li>
-                    <li><a href="/Architecture Projects.html">Architecture Projects</a></li>
-            </ul>
-        </header-bar>
+        <!-- Header Bar -->
+        <div id="header-placeholder"></div>
+        <script>
+          fetch("/headerbar.html")
+            .then(response => response.text())
+            .then(data => {
+              const temp = document.createElement('div');
+              temp.innerHTML = data.trim();
+              document.getElementById("header-placeholder").replaceWith(temp.firstChild);
+            });
+        </script>
 
        
         
@@ -189,7 +196,7 @@
                                             
                                         "
                                         alt="Card Image"
-                                        src="images/Longboard/Scene-37004010_1.png" 
+                                        src="images/Longboard/Porshe_Lean.png" 
                                         loading="lazy"
                                         class="image" />
                                     <div class="mask-frame"></div>
@@ -238,7 +245,7 @@
                                             
                                         "
                                         alt="Card Image"
-                                        src="images/Longboard/Scene%2037004011.png"
+                                        src="images/Longboard/Drop_board.png"
                                         loading="lazy"
                                         class="image" />
                                     <div class="mask-frame"></div>
@@ -467,7 +474,7 @@
                                 id="w-node-_0a0b49af-23b0-5822-d319-3cf64f7103f3-aee64c2d"
                                 data-w-id="0a0b49af-23b0-5822-d319-3cf64f7103f3"
                                 style="opacity: 0"
-                                class="phase-cards">
+                                class="phase-cards hoverable">
                                 <div class="phase-cards-content">
                                     <div class="text-size-large text-weight-medium">
                                         Designing the Battery Pack
@@ -480,7 +487,7 @@
                                 id="w-node-_0a0b49af-23b0-5822-d319-3cf64f7103fc-aee64c2d"
                                 data-w-id="0a0b49af-23b0-5822-d319-3cf64f7103fc"
                                 style="opacity: 0"
-                                class="phase-cards">
+                                class="phase-cards hoverable">
                                 <div class="phase-cards-content">
                                     <div class="text-size-large text-weight-medium">
                                         Fitting the Motor
@@ -495,7 +502,7 @@
                                 id="w-node-_0a0b49af-23b0-5822-d319-3cf64f710405-aee64c2d"
                                 data-w-id="0a0b49af-23b0-5822-d319-3cf64f710405"
                                 style="opacity: 0"
-                                class="phase-cards">
+                                class="phase-cards hoverable">
                                 <div class="phase-cards-content">
                                     <div class="max-width-26ch">
                                         <div class="text-size-large text-weight-medium">
@@ -561,9 +568,9 @@
                                                 alt="Icon" />
                                         </div>
                                         <div class="features-heading align-left">
-                                            <div class="heading-6 text-weight-medium">Compact Design</div>
+                                            <div class="heading-6 text-weight-medium">Suitable at Home or Away</div>
                                             <div class="text-size-medium">
-                                                A 34mph transport device that can be carried with you anywhere
+                                                Experience the power of of a 250W motor providing the feel of flight wether you aree on your daily commute or exploring the countryside
                                             </div>
                                         </div>
                                     </div>
@@ -613,6 +620,48 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="features-image-container hoverable">
+                                    <div
+                                        href="#"
+                                        class="features-image-wrapper-wide"
+                                        style="
+                                            opacity: 1;
+                                            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                            transform-style: preserve-3d;
+                                        ">
+                                        
+                                        <img
+                                            sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 56vw"
+                                            srcset=" "
+                                            alt="Features Image"
+                                            src="images/Longboard/Longboard_London_Wide.png"
+                                            loading="lazy"
+                                            class="image main-image"
+                                            style="
+                                                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                                transform-style: preserve-3d;
+                                            " />
+                                        <img
+                                            sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 56vw"
+                                            srcset=" "
+                                            alt="Features Image"
+                                            src="images/Longboard/Longboard_Cornwall_wide.png"
+                                            loading="lazy"
+                                            class="image hover-image"
+                                            style="
+                                                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                                                    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                                                transform-style: preserve-3d;
+                                            " />
+                                        
+                                        
+                                        <div class="gradient-overlay bigger"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="features-vantages">
                                 <div class="features-image-container">
                                     <div
                                         href="#"
@@ -640,35 +689,6 @@
                                         <div class="gradient-overlay bigger"></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="features-vantages">
-                                <div class="features-image-container">
-                                    <div
-                                        href="#"
-                                        class="features-image-wrapper-wide"
-                                        style="
-                                            opacity: 1;
-                                            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-                                                rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                                            transform-style: preserve-3d;
-                                        ">
-                                        <img
-                                            sizes="(max-width: 479px) 93vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 56vw"
-                                            srcset="
-                                                
-                                            "
-                                            alt="Features Image"
-                                            src="images/Longboard/Scene%2037004011.png"
-                                            loading="lazy"
-                                            class="image"
-                                            style="
-                                                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-                                                    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                                                transform-style: preserve-3d;
-                                            " />
-                                        <div class="gradient-overlay bigger"></div>
-                                    </div>
-                                </div>
                                 <div class="features-vantages-content">
                                     <div
                                         class="features-heading-wrapper"
@@ -685,9 +705,9 @@
                                                 alt="Icon" />
                                         </div>
                                         <div class="features-heading align-left">
-                                            <div class="heading-6 text-weight-medium">Power Beneath Your Feet</div>
+                                            <div class="heading-6 text-weight-medium">Compact Design</div>
                                             <div class="text-size-medium">
-                                                Experience the power of of a 250W motor providing the feel of flight on your daily commute
+                                                Designed to be carried with you on the go anywhere from home, to car, to anywhere!
                                             </div>
                                         </div>
                                     </div>
@@ -1194,7 +1214,15 @@
                 </div>
             
     </div>
+            
+            
+            
+            
 </section>
+        
+        
+        
+        
         
         
         <!--

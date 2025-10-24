@@ -34,6 +34,12 @@
         <script src="js/jquery-3.5.1.min.dc5e7f18c8.js"></script>
         <script src="./Loader.js"></script>
         
+        <!-- Smooth Scroll Script -->
+        <script type="module" src="/js/lenis-init.mjs"></script>
+        <link rel="stylesheet" href="css/cursor.css">
+        <script src="js/cursor.js" defer></script>
+        <!-------------------------->
+        
         
         <script type="text/javascript">
             !(function (o, c) {
@@ -90,34 +96,17 @@
         
         
         
-        <header-bar class="banner-text" id="navbar">
-            
-            <div class="logo">
-            
-            <a
-                            href="/"
-                            data-w-id="6deb3682-e1f7-9f5f-adeb-87fc1448026f"
-                            aria-current="page"
-                            class="brand w-nav-brand w--current"
-                            ><img
-                                src="images/DesignLogo.jpg"
-                                
-                                loading="lazy"
-                                alt="Logo Navbar"
-                        /></a>
-                
-            </div>
-            
-                <ul>
-                    <li><a href="/Home.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact Me</a></li>
-                    <li><a href="/Design Projects.html">Design Projects</a></li>
-                    <li><a href="#">Architecture Projects</a></li>
-                </ul>
-            
-        
-        </header-bar>
+        <!-- Header Bar -->
+        <div id="header-placeholder"></div>
+        <script>
+          fetch("/headerbar.html")
+            .then(response => response.text())
+            .then(data => {
+              const temp = document.createElement('div');
+              temp.innerHTML = data.trim();
+              document.getElementById("header-placeholder").replaceWith(temp.firstChild);
+            });
+        </script>
         
         <!-- Rotating Words -->
         

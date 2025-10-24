@@ -22,6 +22,14 @@
         <script src="./ScrollBar.js"></script>
         
 
+        
+        <!-- Smooth Scroll Script -->
+        <script type="module" src="/js/lenis-init.mjs"></script>
+        <link rel="stylesheet" href="css/cursor.css">
+        <script src="js/cursor.js" defer></script>
+        <!-------------------------->
+        
+        
         <script type="text/javascript">
             !(function (o, c) {
                 var n = c.documentElement,
@@ -64,20 +72,17 @@
         
         
         
-        <header-bar class="banner-text" id="navbar">
-            <div class="logo">
-                <a
-                    href="/"
-                    data-w-id="6deb3682-e1f7-9f5f-adeb-87fc1448026f"
-                    aria-current="page"
-                    class="brand w-nav-brand w--current"
-                    ><img src="images/DesignLogo.jpg" loading="lazy" alt="Logo Navbar"
-                /></a>
-            </div>
-            
-            <div id="navbarContent"></div>
-            
-        </header-bar>
+        <!-- Header Bar -->
+        <div id="header-placeholder"></div>
+        <script>
+          fetch("/headerbar.html")
+            .then(response => response.text())
+            .then(data => {
+              const temp = document.createElement('div');
+              temp.innerHTML = data.trim();
+              document.getElementById("header-placeholder").replaceWith(temp.firstChild);
+            });
+        </script>
 
         
         
